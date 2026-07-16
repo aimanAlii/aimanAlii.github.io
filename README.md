@@ -1,131 +1,102 @@
-# Developer Portfolio
+# Aiman Ali — Portfolio
 
-A production-ready, data-driven developer portfolio built with **Next.js 15 (App Router)**, **React 19**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**. Dark mode by default, fully responsive, SEO-optimized, and designed so that editing a handful of files updates the entire site.
+Personal portfolio site built with Next.js, showcasing my work as a Senior FullStack Engineer specializing in React, TypeScript, and AI-augmented development workflows.
 
----
-
-## ✨ What's inside
-
-- **9 pages**: Home, About, Projects (+ dynamic project detail), Experience, Skills, Blog (+ dynamic post, MDX-ready), Contact, Privacy Policy, plus a custom 404.
-- **Data-driven architecture** — all personal content lives in `/data`, nothing is hardcoded in components.
-- **Dark / Light / System theme**, persisted across visits (`next-themes`).
-- **Framer Motion** throughout: scroll reveals, hero animations, hover states, page-load motion, button ripple.
-- **Command palette** (`Ctrl/Cmd + K`) for quick navigation.
-- **Working contact form** with React Hook Form + Zod validation, ready to wire to a real backend.
-- **Project explorer**: search, category filter, and pagination.
-- **Full SEO kit**: metadata, Open Graph, Twitter cards, JSON-LD, `sitemap.xml`, `robots.txt`, web manifest, favicons.
-- **Accessibility**: semantic HTML, visible focus states, skip-to-content link, `prefers-reduced-motion` support.
+🔗 **Live site:** [your-domain-or-github-pages-link-here]
 
 ---
 
-## 🚀 Getting started
+## About Me
 
-**Requirements:** Node.js 18.18+ and npm (or pnpm/yarn).
+Senior JavaScript Engineer with 5+ years of experience delivering high-performance, scalable web applications using React, Next.js, and TypeScript. I focus on frontend architecture, code-quality standards, and mentoring — combined with AI-augmented development practices (GitHub Copilot, Claude API, prompt engineering) to accelerate delivery without compromising engineering rigor.
+
+- 📍 Lahore, Pakistan
+- 📧 aimanzahid828@gmail.com
+- 💼 [https://www.linkedin.com/in/aiman-alii/]
+
+---
+
+## Tech Stack
+
+**Core**
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+
+**Tooling**
+- ESLint / Prettier
+- GitHub Actions (CI/CD)
+- GitHub Pages (static hosting)
+
+---
+
+## Featured Work
+
+### [Postiz — Social Scheduling Platform](https://postiz.com)
+Next.js · Nest.js · PostgreSQL · Prisma
+Feature development on a production scheduling SaaS; integrated AI-generated copy suggestions via the Claude API, cutting time-to-draft by ~40%.
+
+### [SimplyBook — Appointment Booking Platform](https://simplybook.com)
+Next.js 13 · TypeScript · React
+Migrated legacy Pages Router flows to App Router with React Server Components, improving TTFB by ~15%.
+
+### [Rep Wallet Portal — Pharma Rep Tools](https://repwallet.impiricus.com)
+React · TypeScript · SASS · Ant Design
+Sole frontend engineer on the initial build — designed the component architecture, integrated 15+ REST endpoints, and implemented JWT-based role access control. Delivered on schedule with zero post-launch critical defects.
+
+---
+
+## Getting Started
+
+Clone and run locally:
 
 ```bash
-# 1. Install dependencies
+git clone https://github.com/<your-username>/<your-repo>.git
+cd <your-repo>
 npm install
-
-# 2. Copy the environment template and fill in your details
-cp .env.example .env.local
-
-# 3. Run the dev server
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000](http://localhost:3000) to view it.
 
-Other scripts:
+### Build for production (static export)
 
 ```bash
-npm run build   # production build
-npm run start   # run the production build locally
-npm run lint    # ESLint
-npm run format  # Prettier
+npm run build
 ```
+
+Static output is generated in the `out/` directory.
 
 ---
 
-## 🎨 Making it yours (takes ~10 minutes)
+## Deployment
 
-Everything personal lives in `/data`. Nothing else needs to change for a basic customization pass.
+This site auto-deploys to **GitHub Pages** via GitHub Actions on every push to `main`.
 
-| File | What to edit |
+- Workflow: `.github/workflows/deploy.yml`
+- Config: `next.config.js` uses `output: 'export'` for static generation
+- Live at: `https://<your-username>.github.io/<repo-name>` (or custom domain, if configured)
+
+---
+
+## Skills
+
+| Category | Technologies |
 |---|---|
-| `data/profile.ts` | Name, role, bio, avatar, contact info, resume link, social links, stats, fun facts |
-| `data/projects.ts` | Your projects — title, description, tech stack, links, images |
-| `data/skills.ts` | Skill categories and proficiency levels |
-| `data/experience.ts` | Work history and education |
-| `data/misc.ts` | testimonials, blog post placeholders, nav items |
-
-**Images**: replace the placeholder SVGs in `public/images/**` with real photos/screenshots (same filenames, or update the paths in the data files). Replace `public/resume.pdf` with your actual résumé.
-
-**Environment variables** (`.env.local`, based on `.env.example`):
-
-```
-NEXT_PUBLIC_SITE_URL=https://yourdomain.com
-NEXT_PUBLIC_NAME="Your Name"
-NEXT_PUBLIC_EMAIL=you@example.com
-NEXT_PUBLIC_GITHUB=https://github.com/yourusername
-NEXT_PUBLIC_LINKEDIN=https://linkedin.com/in/yourusername
-NEXT_PUBLIC_RESUME=/resume.pdf
-NEXT_PUBLIC_TWITTER=https://x.com/yourusername
-NEXT_PUBLIC_INSTAGRAM=https://instagram.com/yourusername
-NEXT_PUBLIC_GOOGLE_ANALYTICS=G-XXXXXXXXXX
-```
-
-**Colors & type**: design tokens live as CSS variables in `styles/globals.css` (`:root` = dark, `.light` = light) and are wired into `tailwind.config.ts`. Change the HSL values there to re-theme the whole site. Fonts are set in `app/layout.tsx` via `next/font/google` (Space Grotesk / Inter / JetBrains Mono).
-
-**Contact form backend**: `components/contact/contact-form.tsx` currently simulates a submission. Replace the `TODO` block with a real API call — e.g. an API route that sends email via Resend/SendGrid, or a service like Formspree.
-
-**Blog**: `data/misc.ts` holds placeholder posts and `app/blog/[slug]/page.tsx` renders a placeholder body. To go fully live, add MDX support (`@next/mdx`, `next-mdx-remote`, or Contentlayer) and point the detail page at real content in a `/content/posts` folder.
+| Languages | JavaScript (ES6+), TypeScript, HTML5, CSS3 |
+| Frameworks | React.js, Next.js, Vue.js, Express.js |
+| Styling | Tailwind CSS, SASS/SCSS, Ant Design, CSS Modules |
+| State & Data | Redux, Redux Toolkit, React Query, REST APIs, Prisma |
+| AI Tooling | GitHub Copilot, Claude API, prompt engineering, AI-assisted code review |
+| DevOps | Git, GitHub, GitLab, Bitbucket, CI/CD pipelines |
+| Quality | Unit testing, Lighthouse / Core Web Vitals, TTFB optimization, Agile/Scrum |
 
 ---
 
-## 🗂 Project structure
+## Contact
 
-```
-app/                  # Routes (App Router)
-  about/ projects/ experience/ skills/ blog/ contact/ privacy-policy/
-  layout.tsx sitemap.ts robots.ts manifest.ts
-components/
-  ui/                 # Button, Card, Badge, SectionHeading
-  layout/             # Navbar, Footer
-  home/ about/ projects/ contact/
-  shared/             # Theme, cursor, command palette, timeline, etc.
-data/                 # ← Single source of truth for all content
-types/                # Shared TypeScript interfaces
-lib/                  # cn(), SEO helpers
-hooks/                # Scroll progress, media query, etc.
-constants/            # Site-wide constants
-public/               # Images, icons, resume
-```
+Open to freelance and full-time opportunities. Reach out via email or LinkedIn above.
 
 ---
 
-## ☁️ Deploying to Vercel
-
-1. Push this repository to GitHub/GitLab/Bitbucket.
-2. Go to [vercel.com/new](https://vercel.com/new) and import the repository.
-3. Vercel auto-detects Next.js — no build config changes needed.
-4. Add your environment variables from `.env.example` in **Project Settings → Environment Variables**.
-5. Deploy. Subsequent pushes to your main branch redeploy automatically.
-
-For a custom domain: **Project Settings → Domains**, then update `NEXT_PUBLIC_SITE_URL` to match and redeploy so sitemap/canonical URLs stay accurate.
-
----
-
-## 🧩 Tech stack
-
-Next.js 15 (App Router) · React 19 · TypeScript · Tailwind CSS · Framer Motion · shadcn/ui-style primitives (Radix + CVA) · React Hook Form + Zod · next-themes · Lucide + React Icons · cmdk · Sonner
-
----
-
-## Notes on this build
-
-This copy is already populated with Aiman Ali's real resume data — experience, projects, skills, education, and contact info all come straight from the uploaded resume, so `/data` is largely ready to go. Two things still need attention:
-
-- **LinkedIn / portfolio URLs**: the resume only listed link text ("LinkedIn", "Portfolio") without the underlying URLs, so `data/profile.ts` uses placeholders — update them (or set `NEXT_PUBLIC_LINKEDIN` / `NEXT_PUBLIC_SITE_URL` in `.env.local`).
-- **testimonials**: no certifications were listed on the resume, so that page currently shows a friendly empty state — add real ones to `data/misc.ts` whenever available. Testimonials are placeholder quotes attributed to your real employers/clients — swap in actual quotes once you have permission to publish them.
-
-Photos, project screenshots, and company logos are still generated placeholder SVGs/PNGs in the new pink-purple palette — replace them in `public/images/**` with real assets (same filenames, or update the paths in `/data`). Your real resume PDF is already wired up at `public/resume.pdf` and downloads from the hero/nav/command-palette.
+*Built and maintained by Aiman Ali.*
