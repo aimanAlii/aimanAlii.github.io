@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 273 38% 8%;
+  --surface: 273 30% 12%;
+  --surface-hover: 273 26% 17%;
+  --border: 273 22% 23%;
+  --foreground: 300 25% 93%;
+  --muted: 285 14% 68%;
+  --accent: 322 75% 76%;
+  --accent-foreground: 273 40% 10%;
+  --amber: 262 65% 74%;
+  --danger: 350 75% 68%;
+}
+
+.light {
+  --background: 300 45% 97%;
+  --surface: 0 0% 100%;
+  --surface-hover: 300 35% 95%;
+  --border: 300 25% 89%;
+  --foreground: 280 32% 16%;
+  --muted: 280 12% 42%;
+  --accent: 322 55% 48%;
+  --accent-foreground: 0 0% 100%;
+  --amber: 262 45% 46%;
+  --danger: 350 65% 46%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+::selection {
+  background-color: hsl(var(--accent) / 0.35);
+  color: hsl(var(--foreground));
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted));
+}
+
+@layer utilities {
+  .glass {
+    background: hsl(var(--surface) / 0.55);
+    backdrop-filter: blur(16px) saturate(140%);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+    border: 1px solid hsl(var(--border) / 0.7);
+  }
+
+  .prompt-label::before {
+    color: hsl(var(--accent));
+    font-family: var(--font-mono);
+  }
+
+  .text-gradient {
+    background: linear-gradient(120deg, hsl(var(--accent)), hsl(var(--amber)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .focus-ring {
+    outline: none;
+  }
+  .focus-ring:focus-visible {
+    outline: 2px solid hsl(var(--accent));
+    outline-offset: 3px;
+    border-radius: 0.5rem;
+  }
+
+  .star-shape {
+    clip-path: polygon(
+      50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%,
+      50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
