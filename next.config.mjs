@@ -1,11 +1,14 @@
+const isGithubPages = process.env.GITHUB_ACTIONS === "true";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  output: "export",
   images: {
     unoptimized: true,
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/aimanAlii.github.io' : '',
+  basePath: isGithubPages ? "/aimanAlii.github.io" : "",
+  assetPrefix: isGithubPages ? "/aimanAlii.github.io/" : "",
   trailingSlash: true,
 };
 
-module.exports = nextConfig;
+export default nextConfig;
