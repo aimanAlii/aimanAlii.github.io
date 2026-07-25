@@ -7,7 +7,6 @@ import { blogPosts } from "@/data/misc";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Badge } from "@/components/ui/badge";
 import { formatDate } from "@/lib/utils";
-import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
 
 export const metadata: Metadata = buildMetadata({
