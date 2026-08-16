@@ -9,4 +9,3 @@ build
 *.log
 next-env.d.ts
 .vercel
-package-lock.json
