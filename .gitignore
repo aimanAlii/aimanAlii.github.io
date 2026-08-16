@@ -1,4 +1,4 @@
-node_modules
+node_modules/
 .next
 out
 build
@@ -9,4 +9,3 @@ build
 *.log
 next-env.d.ts
 .vercel
-package-lock.json
